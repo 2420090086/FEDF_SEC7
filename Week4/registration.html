@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <form id="myForm" novalidate> 
+<title>Registration</title>
+<div class="form group">
+  <label for="fullname">Fullname</label>  
+  <input type="text" id="fullname"required> 
+  <div class="error"id="fullnameError"></div>
+</div>
+
+<div class="form group">
+  <label for="Email">Email</label>  
+  <input type="text" id="Email"required> 
+  <div class="error"id="EmailError"></div>
+</div>
+
+<div class="form group">
+  <label for="Number">Phone Number</label>  
+  <input type="number" id="Number"required> 
+  <div class="error"id="NumberError"></div>
+</div>
+
+<div class="form group">
+  <label for="password">Password</label>  
+  <input type="text" id="Password"required> 
+  <div class="error"id="passwordError"></div>
+</div>
+</form>
+
+<script>
+const form = document.getElementById("myForm");
+const fullname = document.getElementById("fullname");
+const Email = document.getElementById("email");
+const password = document.getElementById("password");
+const phone = document.getElementById("phone");
+
+const fullnameError = document.getElementById("fullnameError");
+const EmailError = document.getElementById("emailError");
+const passwordError = document.getElementById("passwordError");
+const NumberError = document.getElementById("numberError");
+const successMessage=docment.getElementById("successMessage");
+
+
+function validateFullname(){
+
+if(fullname.value.trim()===""){
+fullnameError.textContent = "Fullname Is Required"
+fullname.classList.add ("Invalid")
+fullname.classList.add ("valid")
+return false;
+}
+fullnameError.textContent= ""
+
+}
+</script>
+</head>
+</html>
